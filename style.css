@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+*{
+    box-sizing: border-box;
+}
+*::selection{
+    background: red;
+}
+#body{
+    background: linear-gradient(90deg,#ffffff, #e4e4e4);
+    transition: 0.3s ease all;
+}
+#body.dark{
+    background: linear-gradient(90deg,#232526,#414345);
+}
+#TextArea{
+    /* ESTILO */
+    background: #ffffff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    border: none;
+    
+    /* POSIÇÃO */
+
+    transition: 0.3s ease all;
+}
+#TextArea.dark{
+    background: #141414e0;
+}
+#btn{
+    margin: 4px;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    color: #141414e0;
+    background: #fff;
+    font-family: 'Poppins';
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease all;
+}
+#btn.dark{
+    background: #141414e0;
+    color: #fff;
+}
+#toggle-mode{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: #000;
+    transition: 0.3s ease all;
+}
+#toggle-mode.dark{
+    color: #fff;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    padding: 10px 0px;
+}
+input[type=color]{
+   border: none;
+   background: none;
+   cursor: pointer;
+}

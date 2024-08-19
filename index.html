@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rich Text Editor</title>
+</head>
+<body onload="enableEditMode()" id="body">
+
+    <div id="toggle-mode">
+        <a id="teste">Dark Mode</a>
+        <br>
+        <i onclick="toggleMode()" id="toggle" class="fas fa-toggle-off"></i>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <button id="btn" onclick="execCmd('bold')" title="negrito"><i class="fas fa-bold"></i></button>
+            <button id="btn" onclick="execCmd('italic')" title="itálico"><i class="fas fa-italic"></i></i></i></button>
+            <button id="btn" onclick="execCmd('underline')" title="inserir sublinhado"><i class="fas fa-underline"></i></button>
+            <button id="btn" onclick="execCmd('undo')" title="voltar"><i class="fas fa-undo"></i></button>
+            <button id="btn" onclick="execCmd('redo')" title="refazer"><i class="fa fa-repeat"></i></button>
+            <button id="btn" onclick="execCmd('strikeThrough')" title="risco"><i class="fa fa-strikethrough"></i></button>
+            <button id="btn" onclick="execCmd('justifyLeft')"><i class="fa fa-align-left"></i></button>
+            <button id="btn" onclick="execCmd('justifyRight')"><i class="fa fa-align-right"></i></button>
+            <button id="btn" onclick="execCmd('justifyCenter')"><i class="fa fa-align-center"></i></button>
+            <button id="btn" onclick="execCmd('justifyFull')"><i class="fa fa-align-justify"></i></button>
+            <button id="btn" onclick="execCmd('cut')" title="cortar"><i class="fa fa-cut"></i></button>
+            <button id="btn" onclick="execCmd('copy')" title="copiar"><i class="fa fa-copy"></i></button>
+            <button id="btn" onclick="execCmd('indent')"><i class="fa fa-indent"></i></button>
+            <button id="btn" onclick="execCmd('outdent')"><i class="fa fa-dedent"></i></button>
+            <button id="btn" onclick="execCmd('insertUnorderedList')" title="inserir lista não ordenada"><i class="fa fa-list-ul"></i></button>
+            <button id="btn" onclick="execCmd('insertOrderedList')" title="inserir lista ordenada"><i class="fa fa-list-ol"></i></button>
+            <button id="btn" onclick="execCmd('insertParagraph')" title="inserir parágrafo"><i class="fa fa-paragraph"></i></button>
+            <button id="btn" onclick="execCmd('insertHorizontalRule')" title="inserir linha horizontal">-</button>
+            <button id="btn" onclick="execCmd('createLink', prompt('URL','http://'))" title="inserir hyper-link"><i class="fa fa-link"></i></button>
+            <button id="btn" onclick="execCmd('unlink')"><i class="fa fa-unlink"></i></button>
+            <button id="btn" onclick="execCmd('formatBlock','<H1>')">H1</button>
+            <button id="btn" onclick="execCmd('formatBlock','<H2>')">H2</button>
+            <button id="btn" onclick="execCmd('formatBlock','<H3>')">H3</button>
+            <button id="btn" onclick="execCmd('formatBlock','<H4>')">H4</button>
+            <button id="btn" onclick="execCmd('formatBlock','<H5>')">H5</button>
+            <button id="btn" onclick="execCmd('formatBlock','<H6>')">H6</button>
+            <br>
+            <input id="btn" value="3" type="number" min="1" max="7" onchange="execCmd('fontSize',this.value)">
+            <a id="btn">fore color: <input onchange="execCmd('foreColor',this.value)" type="color"></a>
+            <select id="btn" onchange="execCmd('fontName', this.value)">
+                <option style="font-family: Arial;" value="Arial">Arial</option>
+                <option style="font-family: Comic Sans MS;" value="Comic Sans MS">Comic Sans MS</option>
+                <option style="font-family: Courier;" value="Courier">Courier</option>
+                <option style="font-family: Georgia;" value="Georgia">Georgia</option>
+                <option style="font-family: Tahoma;" value="Tahoma">Tahoma</option>
+                <option style="font-family: Times New Roman;" value="Times New Roman">Times New Roman</option>
+                <option style="font-family: Verdana;" value="Verdana">Verdana</option>
+            </select>
+        </div>
+        <iframe contenteditable="true" id="TextArea" name="richTextField" style="width: 1200px; height: 500px;"></iframe>
+    </div>
+    <script src="https://kit.fontawesome.com/466c0784ad.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
